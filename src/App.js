@@ -1,10 +1,20 @@
-// import logo from './logo.svg';
-// import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+
+ import './index.css';
+
 
 function App() {
   return (
-    <div className="bg-slate-500">
-     <h1>Hello World !!</h1>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+      </Routes>
     </div>
   );
 }
